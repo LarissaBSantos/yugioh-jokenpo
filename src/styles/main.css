@@ -1,0 +1,148 @@
+body {
+    cursor: url("../assets/cursor/yugicursor.png"), default;
+}
+
+button, 
+img, 
+a,
+button:hover,
+img:hover,
+a:hover {
+    cursor: url("../assets/cursor/yamiyugicursorGLOW.png"), auto;
+}
+
+.bg-video {
+    position: absolute;
+    z-index: -2;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.bg-video .video{
+    height: 100vh;
+}
+
+.bg-video::after{
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+        90deg, 
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0.8) 50%, 
+        rgba(0, 0, 0, 1) 100%
+    );
+}
+
+.contain {
+    position: relative;
+    z-index: 3;
+    height: 100vh;
+    display: flex;
+}
+
+.frame {
+    background-color: #fff;
+    padding: 2rem;
+    border: 3px solid #000;
+    border-radius: 5px;
+}
+
+.container-left {
+    width: 35%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container-right {
+    width: 65%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+}
+
+/* container left styles */
+
+.card-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 300px;
+}
+
+#card-name{ 
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+#card-type {
+    font-size: 1rem;
+}
+
+/* container right styles */
+
+.card-box__container .card-versus__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-box {
+    height: 10rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cards-top, 
+.cards-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.cards-top .card-infield  {
+    width: 125px;
+    height: 180px;
+    border: 1px solid #fff;
+    border-radius: 0.5rem;
+}
+
+.cards-top .card-infield img {
+    width: 125px;
+    height: 180px; 
+}
+
+#icon {
+    height: 100px;
+    width: 100px;
+}
+
+
+#next-level {
+    display: none;
+}
+
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.2);
+}
+
+.debug{
+    border: 2px solid red;
+}

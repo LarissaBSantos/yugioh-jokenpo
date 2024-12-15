@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yu-Gi-Oh Edição Pedra-Papel-Tesoura</title>
+
+    <!-- reset css -->
+    <link rel="stylesheet" href="./src/styles/reset.css">
+
+    <!-- framework css -->
+    <link rel="stylesheet" href="./src/styles/buttons.css">
+    <link rel="stylesheet" href="./src/styles/containers_and_frames.css">
+
+    <!-- main css -->
+    <link rel="stylesheet" href="./src/styles/main.css">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./src/assets/favicon/Favicon.ico" type="image/x-icon">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <audio id="bgm" loop>
+        <source src="./src/assets/audios/egyptian_duel.mp3" type="audio/mp3">
+    </audio>
+    <div class="bg-video">
+        <video class="video" autoplay muted loop>
+            <source src="./src/assets/video/yugi.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="contain">
+        <div class="container-left framed-golden-2">
+            <div class="score frame" id="score-players">Ganhou: 0 | Perdeu: 0</div>
+            <div class="card">
+                <img id="card-image">
+            </div>
+            <div class="card-details frame">
+                <p id="card-name">Select Card</p>
+                <p id="card-type"></p>
+            </div>
+        </div>
+        <div class="container-right">
+            <div class="card-box__container">
+                <div class="card-box framed" id="computer-cards"></div>
+                <div class="card-versus__container">
+                    <div class="cards-top">
+                        <div class="card-infield">
+                            <img id="player-card">
+                        </div>
+                        <img src="./src/assets/icons/millenium2.png" id="icon">
+                        <div class="card-infield">
+                            <img id="computer-card">
+                        </div> 
+                    </div>
+                    <div class="cards-bottom">
+                        <button class="rpgui-button" id="next-level" onclick="resetDuel()"></button>
+                    </div>
+                </div>
+                <div class="card-box framed" id="player-cards"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./src/scripts/engine.js" defer></script>   
+</body>
+</html>
